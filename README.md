@@ -1,6 +1,6 @@
 # grin-voucher
-This is an explorative study done in my hobby time, not a commitment to this endavour.
-This little projects aims to to explore and create a prototype of a Grin-vouchers system. Grin-vouchers is a method to generate temporary wallets/vouchers that can be represented and shared as QR-code 
+This is an explorative study done in my hobby time, not a commitment to this little endavour.
+This projects aims to to explore and create a prototype of a Grin-vouchers system. Grin-vouchers is a method to generate temporary wallets/vouchers that can be represented and shared as QR-code 
 Vouchers can be generated and loaded using mimblwimble-py and subsequently sweeped/transfered to an associated grin-wallet or Grin++ wallet through its API.
 
 * **Use case 1**
@@ -19,4 +19,4 @@ Vouchers can be generated and loaded using mimblwimble-py and subsequently sweep
   * Check how Bitcoin paper wallets and others are shared through QR, do not reinvent, find a BIP if possible and follow standards
   * Read up on using the grin-wallet API, is Grin++ wallet API with identicals ready to use (ask David)
   * Start testing
-  * For the future, ask a sweep method (transaction) to be implemented in grin-wallet Grin++
+  * For the future, make a feature request a sweep method (transaction) to be implemented in grin-wallet Grin++ to help facilitate this system, optionally just as a Python Add On.
