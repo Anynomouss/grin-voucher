@@ -17,6 +17,9 @@ Vouchers can be generated and loaded using mimblwimble-py and subsequently sweep
  
 * TO DO
   * Check how Bitcoin paper wallets and others are shared through QR, do not reinvent, find a BIP if possible and follow standards
+    * https://github.com/jujum4n/PyperWallet
+    * https://github.com/mr-infty/paper-wallet
+    * https://github.com/Bitcoin-com/paperwallet.bitcoin.com/ 
   * Read up on using the grin-wallet API, is Grin++ wallet API with identical ready to use (ask David)
   * Start testing
   * For the future, make a feature request a sweep method (transaction) to be implemented in grin-wallet Grin++ to help facilitate this system, optionally just as a Python Add On.
