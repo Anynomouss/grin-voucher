@@ -12,8 +12,11 @@ Vouchers can be generated and loaded using mimblwimble-py and subsequently sweep
     
 * **Use case 2**
   * Vouchers can be used as semi "non-interactive" (NITX) and "non-secure" transactions methods for those who wish to do so
-  * Sweeping happens via a transaction that only involves the receiver since the voucher contains the senders’ keys. The transaction is therefore partly non-interactive since the sender of the coins does not need to be online.   
+  * Sweeping happens via a transaction that only involves the receivers machine since the voucher contains the senders’ keys or a full wallet. The transaction therefore is asynchronous interactive (most would call this non-interactive) since the sender of the coins does not need to be online.   
   * Vouchers do not involve payment proofs and should only be used for fun. I cannot stress this enough, but payment proofs are a requirement for a regular transaction, vouchers are in no way ever intended to replace normal transactions.
+ 
+ *  **Use case 3**
+   * Sweeping a normal wallet, e.g. remaining funds from a hot wallet to a new one. This would involve an encrypted wallet, so probably bets to support full wallets with or without encryption of the key with a password.  
  
 * TO DO
   * Check how Bitcoin paper wallets and others are shared through QR, do not reinvent, find a BIP if possible and follow standards
