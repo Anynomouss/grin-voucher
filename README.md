@@ -16,14 +16,14 @@ Vouchers can be generated and loaded using mimblwimble-py and subsequently sweep
   * Vouchers do not involve payment proofs and should only be used for fun. I cannot stress this enough, but payment proofs are a requirement for a regular transaction, vouchers are in no way ever intended to replace normal transactions.
  
  *  **Use case 3**
-   * Sweeping a normal wallet, e.g. remaining funds from a hot wallet to a new one. This would involve an encrypted wallet, so probably bets to support full wallets with or without encryption of the key with a password.  
+   * Sweeping a normal wallet, e.g. remaining funds from a hot wallet to a new one. This would involve an encrypted wallet, so probably best to support full wallets with or without encryption for sweeping  
  
 * TO DO
   * Check how Bitcoin paper wallets and others are shared through QR, do not reinvent, find a BIP if possible and follow standards
     * https://github.com/jujum4n/PyperWallet
     * https://github.com/mr-infty/paper-wallet
     * https://github.com/Bitcoin-com/paperwallet.bitcoin.com/ 
-  * Read up on using the grin-wallet API, is Grin++ wallet API with identical ready to use (ask David)
+  * Read up on using the grin-wallet API, is Grin++ wallet API with identical API calls ready to use (ask David)?
   * Start testing
   * For the future, make a feature request a sweep method (transaction) to be implemented in grin-wallet Grin++ to help facilitate this system, optionally just as a Python Add On.
 
