@@ -2,7 +2,7 @@
 This is an exploratory study done in my hobby time, not a commitment to this little endeavor.
 This project aims to explore and create a prototype of a **Grin-vouchers** system. Grin-vouchers are nothing more than method to 1) generate temporary wallets/vouchers that can be shared as QR-code and, 2) can be loaded by sweeping the funds from the temporary wallet using a normal grin transaction. 
 
-Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet API (also test if it works with Grin++). The sweeping of vouchers is nothing more than loading the temporary wallet from the QR code into a temporary wallet (hope this can be done using grin-wallet and Grin++) and subsequent transfer to grin-wallet or Grin++. For testing purposes this can be done using their API, but hopefully it will be supported with dedicated commands or GUI buttons in the future.
+Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet API (also test if it works with Grin++). Upon scanning a voucher the wallet is loaded from the QR code into a temporary wallet file and subsequent transfer to the main wallet in grin-wallet or Grin++ if the user decided to sign the transaction to transfer the funds. For testing purposes this can be done using their grin-wallet and Grin++ API, but hopefully in the future it will be supported to load/sweep wallet vouchers with a dedicated commands and GUI buttons.
 
 * **Use case 1**
   * Grin vouchers or top-up cards   
@@ -12,7 +12,7 @@ Vouchers can be generated and loaded using this command-line script/tool that us
   * Air drop/Gift cards etc.
     
 * **Use case 2**
-  * Vouchers can be used as a user asynchronous "non-interactive" (NITX) transactions but should be considered as unsafe since there is no payment proofs for the sender of the voucher. 
+  * Vouchers can be used as a user asynchronous "non-interactive" (NITX) transactions but  _**should be considered unsafe since there is no payment proofs for the sender of the voucher**_. 
   * Sweeping happens via a transaction that only involves the receivers machine since the voucher contains the senders’ keys or a full wallet. The transaction therefore is asynchronous interactive (most would call this non-interactive) since the sender of the coins does not need to be online. Vouchers do not generate usable payment proofs for the sender and should therefore only be used for fun and small amounts. In summary ***grin vouchers are in no way intended to replace normal transactions!***.
  
  *  **Use case 3**
