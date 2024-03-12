@@ -1,8 +1,8 @@
 # grin-vouchers
 This is an exploratory study done in my hobby time, not a commitment to this little endeavor.
-This project aims to explore and create a prototype of a **Grin-vouchers** system. Grin-vouchers are nothing more than method to 1) generate temporary wallets/vouchers that can be shared as QR-code and, 2) can be loaded by sweeping the funds from the temporary wallet using a normal grin transaction. 
+This project aims to explore and create a prototype of a **Grin-vouchers** system. Grin-vouchers are a method to 1) generate temporary wallets/vouchers that can be shared as QR-code and, 2) load these wallet/vouchers and transfering their funds using a normal grin transaction. 
 
-Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet API (also test if it works with Grin++). Upon scanning a voucher the wallet is loaded from the QR code into a temporary wallet file and subsequent transfer to the main wallet in grin-wallet or Grin++ if the user decided to sign the transaction to transfer the funds. For testing purposes this can be done using their grin-wallet and Grin++ API, but hopefully in the future it will be supported to load/sweep wallet vouchers with a dedicated commands and GUI buttons.
+Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet/Grin++ API. Scanning a vouchers QR code loads the wallet into a temporary wallet file and subsequent transfer of these funds to the main wallet after reviewing the transaction. For testing purposes, loading of wallets can be done using their grin-wallet and Grin++ API, but hopefully in the future it will be supported to load/sweep wallet vouchers with a dedicated command and GUI button.
 
 * **Use case 1**
   * Grin vouchers or top-up cards   
