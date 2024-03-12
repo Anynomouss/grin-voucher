@@ -32,6 +32,7 @@ In a far future this attack could be done by trying to 'sell' left over dust out
 This attack can be mitigated simply be refusing to load any outputs that have a value below the 0.00001 ツ.
 
 **Vouchers do not generate usable payment proofs** since the proof is between the voucher temporary wallet and not with the original senders wallet, there is no payment proof between sender and receiver. Therefore, grin vouchers should only be used for small value transfers and "Fun" transactions since giving a voucher means giving 100% control to the receiver with no way for dispute settlements! In summary ***grin vouchers are in no way intended to replace normal transactions, use them at your own risk!***.
+
 ## TO DO
   * Check how Bitcoin paper wallets and others are shared through QR, do not reinvent, find a BIP if possible and follow standards
     * https://github.com/jujum4n/PyperWallet
