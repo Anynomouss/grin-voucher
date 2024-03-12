@@ -43,10 +43,19 @@ This attack can be mitigated simply be refusing to load any outputs that have a 
   * Make a feature request a sweep method (transaction) to be implemented in grin-wallet Grin++ to help facilitate this system, optionally just as a Python Add On.  
      * Asked Michael to look into whether grin-wallet can support two wallets under the hood for "sweeping" of funds, which would make loading vouchers way more user friendly.
    
-## Dependencies
+## Dependencies, note for Linux use pip3 for Python 3
+* https://docs.python.org/3/howto/argparse.html
+  * pip insstall argparse 
 * https://github.com/grinventions/mimblewimble-py
 * https://github.com/grinfans/grinmw.py (API wrapper)
 * https://pypi.org/project/qrcode/
+  * pip install argparse   
 * https://docs.python.org/3/library/tomllib.html
+
+```
+function test() {
+  console.log("This code will have a copy button to the right of it");
+}
+```
   
 
