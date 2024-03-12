@@ -40,5 +40,5 @@ This attack can be mitigated simply be refusing to load any outputs that have a 
   * Read up on using the grin-wallet API, is Grin++ wallet API with identical API calls ready to use (ask David)?
   * Start testing
   * Make a feature request a sweep method (transaction) to be implemented in grin-wallet Grin++ to help facilitate this system, optionally just as a Python Add On.  
-  **Asked Michael to look into whether grin-wallet can support two wallets under the hood for "sweeping" of funds, which would make loading vouchers way more user friendly.
+     *Asked Michael to look into whether grin-wallet can support two wallets under the hood for "sweeping" of funds, which would make loading vouchers way more user friendly.
 
