@@ -22,9 +22,9 @@ Vouchers can be generated and loaded using this command-line script/tool that us
 * Sweeping of a voucher/wallet is done using a normal transaction with the only difference being that both wallets are on the receivers machine since the the senders handed over the voucher wallet to the receiver and simply gives full control to the receiver to do with the funds whatever the receiver wants. 
 * Note a *grin voucher does requires interaction* from the sender to the receiver who simply gives the wallet/vouchers to the receiver. From a user perspective the transaction is asynchronous (async) and involves two steps *Receiver -> Sender (RS)*,  opposed to normal transaction contracts which are SRS or RSR and involve three steps. 
 Potential attacks/mall-uses: 
-1) a voucher is sold but does not contain the funds or will be sweeped before the receiver can sweep the funds. Note in theory the seller can even start a race condition after the receiver sweeps the funds by having his transaction include higher transaction fees
-2) the receiver receives the voucher and refuses the pay the sender
-3) the receiver first pays in fiat or crypto, but does not receive the voucher after the purchase
+1) Empty voucher is sold or will be sweeped before the receiver can sweep the funds. Note in theory the seller can start a race condition after the receiver sweeps the funds by having his transaction include higher transaction fees (no payment proof).
+2) the receiver receives the voucher and refuses the pay the sender (no payment proof)
+3) the receiver first pays in fiat or crypto, but does not receive the voucher after the purchase (no payment proof)
 4) dust attack, the voucher contains more output than the receiver/sweeping wallet can handle, potentially making the receivers wallet unusable. Best to always show the number of outputs to be loaded to the user so he/she can decide himself whether the number of outputs poses a risk.
 5) dust attack 2, the dust outputs do hold the value but will be consumed in transaction fees, I call this the *F#ck you attack* since the attack is costly for the sender since creating these outputs is 21 times more costly than using them as inputs in a transaction and such would only be done to F#ck with the receiver. See the transaction fee weight calculations for details
 https://github.com/mimblewimble/grin-rfcs/blob/master/text/0017-fix-fees.md
