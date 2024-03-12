@@ -45,17 +45,13 @@ This attack can be mitigated simply be refusing to load any outputs that have a 
    
 ## Dependencies, note for Linux use pip3 for Python 3
 * https://docs.python.org/3/howto/argparse.html
-  * pip insstall argparse 
+  * ```pip insstall argparse```
 * https://github.com/grinventions/mimblewimble-py
 * https://github.com/grinfans/grinmw.py (API wrapper)
 * https://pypi.org/project/qrcode/
   * pip install argparse   
 * https://docs.python.org/3/library/tomllib.html
 
-```
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
-```
+
   
 
