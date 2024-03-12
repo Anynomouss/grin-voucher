@@ -2,7 +2,7 @@
 This is an exploratory study done in my hobby time, not a commitment to this little endeavor.
 This project aims to explore and create a prototype of a **Grin-vouchers** system. Grin-vouchers are a method to 1) generate temporary wallets/vouchers that can be shared as QR-code and, 2) load these wallet/vouchers and transfering their funds using a normal grin transaction. 
 
-Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet/Grin++ API. Scanning a vouchers QR code loads the wallet into a temporary wallet file and subsequent transfer of these funds to the main wallet after reviewing the transaction. For testing purposes, loading of wallets can be done using their grin-wallet and Grin++ API, but hopefully in the future it will be supported to load/sweep wallet vouchers with a dedicated command and GUI button.
+Vouchers can be generated and loaded using this command-line script/tool that uses mimblwimble-py to generate wallets to which funds are transferred via the grin-wallet/Grin++ API. Scanning a vouchers QR code loads the wallet into a temporary wallet file and subsequent transfer these funds to the main wallet after the user reviewed and approved the transaction. For testing purposes, loading of wallets can be done using their grin-wallet and Grin++ API, but hopefully in the future it will be supported to load/sweep wallet vouchers with a dedicated command and GUI button.
 
 * **Use case 1**
   * Grin vouchers or top-up cards   
@@ -12,15 +12,15 @@ Vouchers can be generated and loaded using this command-line script/tool that us
   * Air drop/Gift cards etc.
     
 * **Use case 2**
-  * Vouchers can be used as a user asynchronous "non-interactive" (NITX) transactions but  _**should be considered unsafe since there is no payment proofs for the sender of the voucher**_. 
-  * Sweeping happens via a transaction that only involves the receivers machine since the voucher contains the senders’ keys or a full wallet. The transaction therefore is asynchronous interactive (most would call this non-interactive) since the sender of the coins does not need to be online. Vouchers do not generate usable payment proofs for the sender and should therefore only be used for fun and small amounts. In summary ***grin vouchers are in no way intended to replace normal transactions!***.
+  * Vouchers can be used as a two step user asynchronous "non-interactive" (UNITX) transactions but  _**should be considered unsafe since there is no payment proofs for the sender of the voucher**_. 
+  * Sweeping happens via a transaction that only involves the receivers machine since the receiver controls both the senders and receivers keys. In summary ***grin vouchers are in no way intended to replace normal transactions since there are no payment proofs and no ways to settle disputes!***.
  
  * **Use case 3**
    * Sweeping a normal wallet, e.g. remaining funds from a hot wallet to a new one. This would involve an encrypted wallet, so probably best to support full wallets with or without encryption for sweeping. This use case has little to do with grin vouchers,   although you could generate a paper wallet as cold storage-backup or a method to easily transfer a full wallet or its funds as a QR code between device. Note that in theory this method can also be loaded for easy wallet migration between devices without even swiping the funds. In this use case the wallet is still encrypted meaning that its transfer should be completely safe and does not create any security risks.
 
 ## Security considerations
 * Sweeping of a voucher/wallet is done using a normal transaction with the only difference being that both wallets are on the receivers machine since the the senders handed over the voucher wallet to the receiver and simply gives full control to the receiver to do with the funds whatever the receiver wants. 
-* Note a *grin voucher does requires interaction* from the sender to the receiver who simply gives the wallet/vouchers to the receiver. From a user perspective the transaction is asynchronous and involves two steps *Receiver -> Sender (RS)*,  opposed to normal transaction contracts which are SRS or RSR and involve three steps. 
+* Note a *grin voucher does requires interaction* from the sender to the receiver who simply gives the wallet/vouchers to the receiver. From a user perspective the transaction is asynchronous (async) and involves two steps *Receiver -> Sender (RS)*,  opposed to normal transaction contracts which are SRS or RSR and involve three steps. 
 Potential attacks/mall-uses: 
 1) a voucher is sold but does not contain the funds or will be sweeped before the receiver can sweep the funds. Note in theory the seller can even start a race condition after the receiver sweeps the funds by having his transaction include higher transaction fees
 2) the receiver receives the voucher and refuses the pay the sender
