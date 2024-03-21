@@ -89,12 +89,12 @@ if __name__ == '__main__':
         ## 3A) Build transaction on Mimnblewimble-py side
         ###############################################################################
         
-        # instantiate two wallets wallet
-        alice_path = 'm/0/1/0'
+        # instantiate two wallets wallet, path is path for address generation for account zero
+        alice_path = 'm/0/1/0,'
         alice_wallet = Wallet.initialize()
         alice_address = alice_wallet.getSlatepackAddress()
         
-        bob_path = 'm/0/1/0'
+        bob_path = 'm/0/1/0,'
         bob_wallet = Wallet.initialize()
         bob_address = bob_wallet.getSlatepackAddress()
         
